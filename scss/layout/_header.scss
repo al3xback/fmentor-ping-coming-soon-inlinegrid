@@ -1,0 +1,20 @@
+@use '../abstracts/functions' as func;
+
+header,
+header h1 {
+	display: grid;
+}
+
+header {
+	justify-items: center;
+}
+
+#logo {
+	display: inline-block;
+	width: func.em(43);
+	height: func.em(13);
+	background: url('../images/logo.svg');
+	background-repeat: no-repeat;
+	background-size: contain;
+	text-indent: -9999px;
+}

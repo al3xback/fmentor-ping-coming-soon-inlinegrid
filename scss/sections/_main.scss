@@ -1,0 +1,16 @@
+@use '../abstracts/variables' as var;
+@use '../abstracts/functions' as func;
+
+.section,
+.section__head,
+.section__body {
+	display: grid;
+}
+
+.section {
+	gap: func.em(60);
+}
+
+.section__head {
+	padding: 0 func.em(20, var.$font-size-primary);
+}

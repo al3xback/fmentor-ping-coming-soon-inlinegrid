@@ -1,0 +1,50 @@
+@use '../abstracts/variables' as var;
+@use '../abstracts/functions' as func;
+
+.form,
+.form__group {
+	display: grid;
+}
+
+.form {
+	margin-top: func.em(20, var.$font-size-primary);
+	text-align: left;
+}
+
+.form__control {
+	padding: func.em(10, var.$font-size-primary)
+		func.em(24, var.$font-size-primary);
+	border: 2px solid var.$color-pale-blue;
+	border-radius: 25px;
+	outline: none;
+	font-size: 1em;
+	color: inherit;
+}
+
+.form__control.invalid,
+.form__control.invalid:focus-visible {
+	border-color: var.$color-light-red;
+}
+
+.form__error-message {
+	padding: 0 func.em(24, var.$font-size-primary);
+	margin: func.em(6, var.$font-size-primary) 0
+		func.em(12, var.$font-size-primary);
+	font-style: italic;
+	color: var.$color-light-red;
+}
+
+@media (min-width: 48em) {
+	.form__group {
+		position: relative;
+		grid-template-columns: 1fr auto;
+		gap: func.em(16);
+	}
+
+	.form__error-message {
+		position: absolute;
+		left: 0;
+		top: 100%;
+		width: 100%;
+	}
+}
