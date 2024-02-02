@@ -14,11 +14,27 @@
 .form__control {
 	padding: func.em(10, var.$font-size-primary)
 		func.em(24, var.$font-size-primary);
-	border: 2px solid var.$color-pale-blue;
-	border-radius: 25px;
+	border: 1px solid var.$color-gray-light;
+	border-radius: 24px;
 	outline: none;
 	font-size: 1em;
 	color: inherit;
+}
+
+.form__control::-webkit-input-placeholder {
+	color: var.$color-gray-light;
+}
+
+.form__control:-ms-input-placeholder {
+	color: var.$color-gray-light;
+}
+
+.form__control::-ms-input-placeholder {
+	color: var.$color-gray-light;
+}
+
+.form__control::placeholder {
+	color: var.$color-gray-light;
 }
 
 .form__control.invalid,

@@ -1,14 +1,44 @@
-footer,
-footer .container {
+@use '../abstracts/variables' as var;
+@use '../abstracts/functions' as func;
+
+.footer,
+.footer .container,
+.footer__content,
+.socmed-links {
 	display: grid;
 }
 
-footer {
+.footer {
 	padding: 1em 0;
 	font-size: 0.8em;
 	text-align: center;
 }
 
-footer p {
+.footer .container {
+	gap: func.em(16, var.$font-size-primary);
+}
+
+.footer p {
 	font-size: inherit;
+}
+
+.footer__content {
+	justify-items: center;
+	gap: func.em(40, var.$font-size-primary);
+	color: var.$color-gray;
+}
+
+.socmed-links {
+	grid-template-columns: 1fr 1fr 1fr;
+	gap: func.em(16);
+}
+
+.socmed-link {
+	display: inline-grid;
+}
+
+@media (min-width: 48em) {
+	.footer__content {
+		gap: func.em(30, var.$font-size-primary);
+	}
 }

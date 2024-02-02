@@ -2,20 +2,19 @@
 @use '../abstracts/functions' as func;
 
 .wrapper,
-.wrapper > .container {
+.wrapper > .container,
+.wrapper__content {
 	display: grid;
 }
 
 .wrapper > .container {
-	justify-items: center;
 	align-items: start;
 }
 
 .wrapper__content {
-	display: inline-grid;
 	gap: func.em(42, var.$font-size-primary);
 	margin: func.em(60, var.$font-size-primary) 0
-		func.em(40, var.$font-size-primary);
+		func.em(60, var.$font-size-primary);
 }
 
 .container {
@@ -23,7 +22,12 @@
 }
 
 @media (min-width: 48em) {
+	.wrapper > .container {
+		justify-items: center;
+	}
+
 	.wrapper__content {
+		display: inline-grid;
 		max-width: func.em(650, var.$font-size-primary);
 	}
 }

@@ -3,6 +3,8 @@
 
 body {
 	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: 1fr auto;
 	background-color: var.$color-white;
 	font-family: var.$font-family-primary;
 	-webkit-font-smoothing: antialiased;
