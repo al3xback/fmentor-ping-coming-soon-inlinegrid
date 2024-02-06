@@ -18,10 +18,6 @@
 	gap: func.em(16, var.$font-size-primary);
 }
 
-.footer p {
-	font-size: inherit;
-}
-
 .footer__content {
 	justify-items: center;
 	gap: func.em(40, var.$font-size-primary);
