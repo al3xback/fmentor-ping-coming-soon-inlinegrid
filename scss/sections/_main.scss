@@ -8,7 +8,7 @@
 }
 
 .section {
-	gap: func.em(60);
+	gap: func.em(52, var.$font-size-primary);
 }
 
 .section__head {
