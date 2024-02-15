@@ -10,23 +10,23 @@
 
 .footer {
 	padding: 1em 0;
-	font-size: 0.8em;
+	font-size: 0.75em;
 	text-align: center;
 }
 
 .footer .container {
-	gap: func.em(16, var.$font-size-primary);
+	gap: func.em(18, var.$font-size-primary);
 }
 
 .footer__content {
 	justify-items: center;
-	gap: func.em(40, var.$font-size-primary);
+	gap: func.em(44, var.$font-size-primary);
 	color: var.$color-gray;
 }
 
 .socmed-links {
 	grid-template-columns: 1fr 1fr 1fr;
-	gap: func.em(16);
+	gap: 1.1em;
 }
 
 .socmed-link {
@@ -35,6 +35,6 @@
 
 @media (min-width: 48em) {
 	.footer__content {
-		gap: func.em(30, var.$font-size-primary);
+		gap: func.em(32, var.$font-size-primary);
 	}
 }
