@@ -28,6 +28,7 @@
 
 	.wrapper__content {
 		display: inline-grid;
+		width: 100%;
 		max-width: func.em(650, var.$font-size-primary);
 	}
 }
